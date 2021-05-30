@@ -180,7 +180,7 @@ exit 0
 take_environ() {
 : ${SH:=/bin/sh}
 : ${CPP:=cpp}
-: ${CXX:=c++}
+: ${CXX:=clang++}
 : ${PREFIX:=/usr/local/}
 }
 
