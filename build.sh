@@ -107,8 +107,8 @@ if [ "${QMAKE_CONF#*IAITO_ENABLE_CRASH_REPORTS=true}" != "$QMAKE_CONF" ]; then
 fi
 mkdir -p "$BUILD"
 cd "$BUILD" || exit 1
-$(find_qmake) ../src/Iaito.pro "$QMAKE_CONF"
-$(find_gmake) -j4
+$(find_qmake) ../src/Iaito.pro "$QMAKE_CONF" QMAKE_LINK="clang++" QMAKE_CXX="clang++"
+$(find_gmake) -j11
 ERR=$((ERR+$?))
 
 # Move translations
